@@ -1,0 +1,58 @@
+{
+  "manifest_version": 2,
+  "name": "Supreme Cookie Bot",
+  "permissions": [
+    "tabs",
+    "*://*.*",
+    "cookies",
+    "*://www.supremenewyork.com/*"
+    // "*"
+  ],
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+        // "https://www.google.de/",
+        // "https://www.supremenewyork.com/shop/accessories/tm108o2rn/uwdopxk23"
+      ],
+      "js": [
+        "content.js"
+        // "addToCart.js"
+      ]
+    },
+    {
+      "matches": ["https://www.google.com/"],
+      "js": ["serverInteraction.js"]
+    },
+    // {
+    //   "matches": ["https://www.supremenewyork.com/shop/all/*"],
+    //   "exclude_matches": ["https://www.supremenewyork.com/shop/all"],
+    //   "js": ["goToArticle.js"]
+    // },
+    // {
+    //   // "matches": ["https://www.supremenewyork.com/shop/accessories/tm108o2rn/uwdopxk23"],
+    //   "matches": ["https://www.supremenewyork.com/shop/*/*/*"],
+    //   "js": ["addToCart.js"]
+    // },
+    {
+      "matches": ["https://www.supremenewyork.com/checkout"],
+      "js": ["doCheckout.js"]
+    }
+    // {
+    //   "matches": ["https://www.supremenewyork.com/shop"],
+    //   "js": ["setCookie.js"]
+    // }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": "ct.png"
+  }
+}
+
+/*
+  Problem: der Browser checkt nur ob es ein match gibt
+  zwischen URL und matches, wenn die Seite neu lädt
+*/

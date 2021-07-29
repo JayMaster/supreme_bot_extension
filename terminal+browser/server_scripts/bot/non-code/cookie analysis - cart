@@ -1,0 +1,26 @@
+cookie analysis: cart
+
+6+items--57467%2C26600-57711%2C26650-57271%2C26456-57634%2C26547-57568%2C26541-57394%2C26467
+
+6+items
+--
+
+57467 // size_id
+%2C // ist ein Komma in URL encoded
+26600 // style_id
+
+-
+
+nächstes Produkt
+
+
+
+cart: 
+1+item--57271%2C26456
+
+
+cart:
+1+item--57711%2C26650
+
+
+1+item--57865%2C26705

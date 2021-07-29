@@ -1,0 +1,1 @@
+javascript:(function(){let script=document.createElement('script');let url='http://localhost:8080/chrome_console.js';script.src = url + "?" + new Date().getTime();document.body.appendChild(script);})();
